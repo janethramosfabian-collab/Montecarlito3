@@ -1,10 +1,10 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL DEFINITIVA (Dark Mode 365)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Corrección Exacta)
    ========================================================= */
 
 .stApp {
     background-color: #070D1B !important;
-    color: #FFFFFF !important;
+    color: #94A3B8 !important; /* Texto general secundario en gris institucional */
     font-family: 'Source Sans Pro', sans-serif, -apple-system, BlinkMacSystemFont;
 }
 
@@ -12,20 +12,20 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Títulos y subtítulos principales en blanco puro nítido */
+/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO */
 .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
-/* Textos generales, etiquetas y subtítulos */
+/* 2. Textos normales, etiquetas y párrafos en gris institucional de lectura cómoda */
 .stApp p, .stApp label, .stApp span, .stMarkdown {
-    color: #E2E8F0 !important;
+    color: #94A3B8 !important;
     font-weight: 400;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR)
+   3. BARRA LATERAL (SIDEBAR)
    ========================================================= */
 section[data-testid="stSidebar"] {
     background-color: #0B132B !important;
@@ -42,15 +42,16 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES, EXPANSORES Y TARJETAS (Azul Oscuro + Bordes Azul Eléctrico)
+   4. CUADROS Y CONTENEDORES (Azul fuerte con letras blancas adentro)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
-    background-color: #111A30 !important;
-    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Toque de azul eléctrico */
+    background-color: #111A30 !important; /* Cuadro de azul fuerte */
+    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Bordes con toque de azul eléctrico */
     border-radius: 14px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* Textos dentro de los cuadros de azul fuerte van con letras blancas */
 .stAlert *, div[data-testid="stExpander"] * {
     color: #FFFFFF !important;
 }
@@ -68,23 +69,14 @@ div[data-testid="stNumberInput"] input {
 }
 
 /* =========================================================
-   4. ESTILIZACIÓN DE IFRAMES Y EDITORES DE CÓDIGO
-   ========================================================= */
-iframe {
-    border: 1.5px solid rgba(0, 102, 255, 0.5) !important;
-    border-radius: 14px !important;
-    background-color: #111A30 !important;
-}
-
-/* =========================================================
-   5. BOTONES (Azul Eléctrico Profesional con Letras Blancas)
+   5. BOTONES (Azul eléctrico profesional con letras blancas)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #0066FF !important; /* Azul eléctrico profesional */
+    background-color: #0066FF !important; /* Azul eléctrico */
     color: #FFFFFF !important;            /* Letras blancas */
     font-weight: 600 !important;
     border-radius: 10px !important;
-    border: 1px solid #38BDF8 !important; /* Toque de luz cian/azul */
+    border: 1px solid #38BDF8 !important; /* Toque de azul eléctrico brillante */
     box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.35) !important;
 }
 
@@ -117,7 +109,7 @@ div.window-risk h4 {
     color: #FFFFFF !important;
 }
 
-/* Tarjetas de Métricas Internas (Cajas de azul fuerte con bordes redondeados y letras blancas) */
+/* Tarjetas de Métricas Internas */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #16223D !important;
     border: 1.5px solid rgba(0, 102, 255, 0.6) !important;
@@ -126,6 +118,6 @@ div.window-risk div[data-testid="stMetric"] {
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #38BDF8 !important; /* Acento azul eléctrico brillante */
+    color: #38BDF8 !important;
     font-weight: 700 !important;
 }

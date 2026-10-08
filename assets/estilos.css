@@ -1,10 +1,10 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Corrección Exacta)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Corrección Definitiva)
    ========================================================= */
 
 .stApp {
     background-color: #070D1B !important;
-    color: #94A3B8 !important; /* Texto general secundario en gris institucional */
+    color: #94A3B8 !important;
     font-family: 'Source Sans Pro', sans-serif, -apple-system, BlinkMacSystemFont;
 }
 
@@ -12,20 +12,20 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO */
+/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO PURO */
 .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
-/* 2. Textos normales, etiquetas y párrafos en gris institucional de lectura cómoda */
+/* Textos generales y etiquetas secundarias en gris institucional */
 .stApp p, .stApp label, .stApp span, .stMarkdown {
     color: #94A3B8 !important;
     font-weight: 400;
 }
 
 /* =========================================================
-   3. BARRA LATERAL (SIDEBAR)
+   2. BARRA LATERAL (SIDEBAR)
    ========================================================= */
 section[data-testid="stSidebar"] {
     background-color: #0B132B !important;
@@ -42,41 +42,50 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   4. CUADROS Y CONTENEDORES (Azul fuerte con letras blancas adentro)
+   3. CONTENEDORES Y TARJETAS GENERALES
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
-    background-color: #111A30 !important; /* Cuadro de azul fuerte */
-    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Bordes con toque de azul eléctrico */
+    background-color: #111A30 !important;
+    border: 1px solid rgba(0, 102, 255, 0.4) !important;
     border-radius: 14px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Textos dentro de los cuadros de azul fuerte van con letras blancas */
 .stAlert *, div[data-testid="stExpander"] * {
     color: #FFFFFF !important;
 }
 
-/* Inputs de texto, números y selectores */
+/* Inputs de texto, números y selectores (Fondo blanco, borde azul eléctrico, texto oscuro) */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
-    background-color: #16223D !important;
-    color: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
     border-radius: 10px !important;
-    border: 1px solid rgba(0, 102, 255, 0.5) !important;
-    font-weight: 500 !important;
+    border: 2px solid #0066FF !important; /* Borde azul eléctrico */
+    font-weight: 600 !important;
+}
+
+/* =========================================================
+   4. CUADRO DE FÓRMULA (CODE EDITOR) - Fondo Blanco y Borde Azul
+   ========================================================= */
+/* Contenedor principal del editor de código */
+div[data-testid="stVerticalBlock"] iframe {
+    background-color: #FFFFFF !important;
+    border: 2px solid #0066FF !important; /* Borde azul eléctrico idéntico a los inputs */
+    border-radius: 12px !important;
 }
 
 /* =========================================================
    5. BOTONES (Azul eléctrico profesional con letras blancas)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #0066FF !important; /* Azul eléctrico */
-    color: #FFFFFF !important;            /* Letras blancas */
+    background-color: #0066FF !important;
+    color: #FFFFFF !important;
     font-weight: 600 !important;
     border-radius: 10px !important;
-    border: 1px solid #38BDF8 !important; /* Toque de azul eléctrico brillante */
+    border: 1px solid #38BDF8 !important;
     box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.35) !important;
 }
 

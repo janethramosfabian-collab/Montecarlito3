@@ -1,5 +1,5 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos Blancos Garantizados)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos Blancos Forzados)
    ========================================================= */
 
 .stApp {
@@ -13,19 +13,24 @@ header[data-testid="stHeader"] {
 }
 
 /* =========================================================
-   1. REGULARES DE TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO
+   1. REGULARES EXCLUSIVAS: TÍTULOS Y SUBTÍTULOS EN BLANCO
    ========================================================= */
+/* Forzar blanco en todas las etiquetas de encabezado y sus hijos (iconos, spans) */
 .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
-.stApp div[data-testid="stMarkdownContainer"] h1, 
-.stApp div[data-testid="stMarkdownContainer"] h2, 
-.stApp div[data-testid="stMarkdownContainer"] h3, 
-.stApp div[data-testid="stMarkdownContainer"] h4,
-.stApp div[data-testid="stMarkdownContainer"] h5,
-.stApp div[data-testid="stMarkdownContainer"] h6,
+.stApp h1 *, .stApp h2 *, .stApp h3 *, .stApp h4 *, .stApp h5 *, .stApp h6 *,
+div[data-testid="stMarkdownContainer"] h1, 
+div[data-testid="stMarkdownContainer"] h2, 
+div[data-testid="stMarkdownContainer"] h3, 
+div[data-testid="stMarkdownContainer"] h4,
+div[data-testid="stMarkdownContainer"] h1 *, 
+div[data-testid="stMarkdownContainer"] h2 *, 
+div[data-testid="stMarkdownContainer"] h3 *, 
+div[data-testid="stMarkdownContainer"] h4 *,
 .stHeadingContainer *, 
-div[data-testid="stSubheader"] *, 
-span[data-testid="stSubheader"] * {
+[data-testid="stSubheader"] *,
+[data-testid="stTitle"] * {
     color: #FFFFFF !important;
+    fill: #FFFFFF !important; /* Mantiene los iconos del título en blanco */
     font-weight: 700 !important;
 }
 
@@ -33,6 +38,11 @@ span[data-testid="stSubheader"] * {
 .stApp p, .stApp label, .stApp span, .stMarkdown {
     color: #94A3B8 !important;
     font-weight: 400;
+}
+
+/* Re-asegurar que las letras dentro de encabezados no se vuelvan grises por la regla de 'span' */
+h1 span, h2 span, h3 span, h4 span {
+    color: #FFFFFF !important;
 }
 
 /* =========================================================
@@ -45,15 +55,18 @@ section[data-testid="stSidebar"] {
 
 section[data-testid="stSidebar"] span, 
 section[data-testid="stSidebar"] p, 
-section[data-testid="stSidebar"] label,
-section[data-testid="stSidebar"] h1,
-section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3 {
+section[data-testid="stSidebar"] label {
     color: #E2E8F0 !important;
 }
 
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+
 /* =========================================================
-   3. CONTENEDORES Y TARJETAS GENERALES
+   3. CONTENEDORES Y TARJETAS GENERALES (Fondo oscuro)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
     background-color: #111A30 !important;
@@ -66,7 +79,7 @@ section[data-testid="stSidebar"] h3 {
     color: #FFFFFF !important;
 }
 
-/* Inputs normales se mantienen en su tono oscuro original */
+/* Inputs de texto y números normales */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
@@ -79,7 +92,7 @@ div[data-testid="stNumberInput"] input {
 }
 
 /* =========================================================
-   4. EXCLUSIVO: BARRA DE FÓRMULAS DE BLANCO CON BORDES AZULES
+   4. EXCLUSIVO: BARRA DE FÓRMULAS EN BLANCO CON BORDES AZULES
    ========================================================= */
 div[data-testid="stVerticalBlock"] iframe {
     background-color: #FFFFFF !important;
@@ -88,7 +101,7 @@ div[data-testid="stVerticalBlock"] iframe {
 }
 
 /* =========================================================
-   5. BOTONES (Azul eléctrico profesional con letras blancas)
+   5. BOTONES (Azul eléctrico profesional)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
     background-color: #0066FF !important;
@@ -105,7 +118,7 @@ button[kind="primary"]:hover, div.stButton > button:hover {
 }
 
 /* =========================================================
-   6. CONTENEDOR DE RESULTADOS Y CAJAS AZULES FUERTES
+   6. CONTENEDOR DE RESULTADOS
    ========================================================= */
 div.window-risk {
     background-color: #111A30 !important;
@@ -120,11 +133,7 @@ div.window-risk,
 div.window-risk *,
 div.window-risk p,
 div.window-risk label,
-div.window-risk span,
-div.window-risk h1,
-div.window-risk h2,
-div.window-risk h3,
-div.window-risk h4 {
+div.window-risk span {
     color: #FFFFFF !important;
 }
 

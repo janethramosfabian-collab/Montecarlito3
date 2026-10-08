@@ -1,1 +1,77 @@
+/* =========================================================
+   1. FONDO GENERAL Y TITULO PRINCIPAL
+   ========================================================= */
+.stApp {
+    background-color: #0b132b !important;
+    color: #f8fafc !important;
+}
 
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* Mantener el título principal H1 grande y prominente */
+.stApp h1 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   2. CAJAS Y BLOQUES INFORMATIVOS
+   ========================================================= */
+.stAlert, div[data-testid="stExpander"] {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+}
+
+/* =========================================================
+   3. CAJAS DE ENTRADA (NUMEROS / TEXTO) Y SELECCION
+   ========================================================= */
+div[data-baseweb="input"],
+div[data-baseweb="select"],
+div[data-testid="stTextInput"] input,
+div[data-testid="stNumberInput"] input {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-radius: 6px !important;
+    border: 1px solid #94a3b8 !important;
+    font-weight: 600 !important;
+}
+
+/* =========================================================
+   4. PANEL Y CONTENEDOR DE RESULTADOS
+   ========================================================= */
+div.window-risk {
+    background-color: #f8fafc !important;
+    border: 2px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4) !important;
+    margin-top: 15px !important;
+}
+
+div.window-risk,
+div.window-risk *,
+div.window-risk p,
+div.window-risk label,
+div.window-risk span,
+div.window-risk h1,
+div.window-risk h2,
+div.window-risk h3,
+div.window-risk h4 {
+    color: #0f172a !important;
+}
+
+div.window-risk div[data-testid="stMetric"] {
+    background-color: #e0f2fe !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+div.window-risk div[data-testid="stMetricValue"] div {
+    color: #0369a1 !important;
+    font-weight: 700 !important;
+}

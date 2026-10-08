@@ -1,5 +1,5 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Ajuste Fino Exacto)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos Blancos Forzados)
    ========================================================= */
 
 .stApp {
@@ -12,8 +12,13 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO */
-.stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+/* 1. TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO (Máxima especificidad) */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, 
+.stApp div[data-testid="stMarkdownContainer"] h1, 
+.stApp div[data-testid="stMarkdownContainer"] h2, 
+.stApp div[data-testid="stMarkdownContainer"] h3, 
+.stApp div[data-testid="stMarkdownContainer"] h4,
+span[data-testid="stHeader"], .stHeadingContainer h1, .stHeadingContainer h2 {
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
@@ -42,7 +47,7 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES Y TARJETAS GENERALES (Mantienen su diseño oscuro original)
+   3. CONTENEDORES Y TARJETAS GENERALES
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
     background-color: #111A30 !important;
@@ -55,7 +60,7 @@ section[data-testid="stSidebar"] h3 {
     color: #FFFFFF !important;
 }
 
-/* Inputs normales (Texto, Números, Selectores) se mantienen en su tono oscuro original */
+/* Inputs normales se mantienen en su tono oscuro original */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,

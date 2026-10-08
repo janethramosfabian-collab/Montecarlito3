@@ -1,36 +1,29 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA UNICA (Inspiración 365 Financial Analyst)
+   ESTÉTICA DINÁMICA DE ALTO CONTRASTE (Azul Eléctrico + Negro + Amarillo)
    ========================================================= */
 
-/* 1. Fondo General de la Aplicación (Azul eléctrico vibrante y profundo) */
+/* 1. Fondo General de la Aplicación (Azul eléctrico vibrante) */
 .stApp {
-    background-color: #0044ff !important; /* Azul eléctrico característico */
-    color: #ffffff !important;
+    background-color: #0044ff !important;
+    color: #0f172a !important; /* Letras negras sobre el fondo azul para dar vida y contraste */
 }
 
 header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Título principal H1 grande, blanco y con acentos limpios */
-.stApp h1 {
-    font-size: 2.3rem !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    letter-spacing: -0.5px;
-}
-
-/* Subtítulos y textos generales claros */
-.stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span {
-    color: #ffffff !important;
+/* Todos los textos principales (títulos, párrafos, etiquetas) en negro sobre el fondo azul */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span {
+    color: #0f172a !important; 
+    font-weight: 700;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR) - Tono Azul Diferenciado
+   2. BARRA LATERAL (SIDEBAR)
    ========================================================= */
 section[data-testid="stSidebar"] {
-    background-color: #0033cc !important; /* Tono azul más oscuro para diferenciar la barra lateral */
-    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background-color: #0033cc !important;
+    border-right: 2px solid #0f172a !important;
 }
 
 section[data-testid="stSidebar"] span, 
@@ -39,23 +32,21 @@ section[data-testid="stSidebar"] label,
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 {
-    color: #ffffff !important;
+    color: #ffffff !important; /* Texto blanco en la barra lateral para legibilidad sobre azul oscuro */
 }
 
 /* =========================================================
-   3. CONTENEDORES Y TARJETAS PRINCIPALES (Paneles Azules / Grises Oscuros Sofisticados)
+   3. CONTENEDORES Y EXPANSORES (Estilo Cuadros Dinámicos)
    ========================================================= */
-div[data-testid="stVerticalBlock"] > div[style*="border"] {
-    background-color: rgba(0, 30, 120, 0.5) !important; /* Panel traslúcido tono azul diferenciado */
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 12px !important;
+.stAlert, div[data-testid="stExpander"] {
+    background-color: #ffffff !important;
+    border: 2px solid #0f172a !important;
+    border-radius: 10px !important;
+    color: #0f172a !important;
 }
 
-.stAlert, div[data-testid="stExpander"] {
-    background-color: #0033cc !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 10px !important;
-    color: #ffffff !important;
+.stAlert *, div[data-testid="stExpander"] * {
+    color: #0f172a !important;
 }
 
 /* =========================================================
@@ -66,43 +57,41 @@ div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
     background-color: #ffffff !important;
-    color: #0f172a !important; /* Letras oscuras dentro de las cajas para legibilidad total */
+    color: #0f172a !important;
     border-radius: 8px !important;
-    border: 1px solid #cbd5e1 !important;
-    font-weight: 600 !important;
+    border: 2px solid #0f172a !important;
+    font-weight: 700 !important;
 }
 
 /* =========================================================
-   5. BOTONES PRINCIPALES (Estilo Amarillo / Dorado Característico)
+   5. BOTONES Y LLAMADOS A LA ACCIÓN (Cuadros Amarillos con Letras Negras)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #ffcc00 !important; /* Amarillo vibrante de llamada a la acción */
-    color: #0f172a !important;            /* Texto oscuro fuerte para contraste perfecto */
-    font-weight: 700 !important;
+    background-color: #ffcc00 !important; /* Cuadro / Botón amarillo vibrante */
+    color: #000000 !important;            /* Letras negras estrictas */
+    font-weight: 900 !important;
     border-radius: 8px !important;
-    border: none !important;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.2s ease-in-out;
+    border: 2px solid #0f172a !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25) !important;
 }
 
 button[kind="primary"]:hover, div.stButton > button:hover {
-    background-color: #e6b800 !important;
+    background-color: #ffd633 !important;
     color: #000000 !important;
 }
 
 /* =========================================================
-   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Estilo Tarjetas Diferenciadas)
+   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Fondo Blanco Limpio con Acentos)
    ========================================================= */
 div.window-risk {
-    background-color: #ffffff !important; /* Fondo blanco puro para resaltar los gráficos y datos tabulares */
-    border: none !important;
+    background-color: #ffffff !important;
+    border: 2px solid #0f172a !important;
     border-radius: 16px !important;
     padding: 24px !important;
-    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.3) !important;
     margin-top: 20px !important;
 }
 
-/* Asegurar que dentro de la ventana de resultados el texto sea oscuro y legible */
 div.window-risk,
 div.window-risk *,
 div.window-risk p,
@@ -115,15 +104,15 @@ div.window-risk h4 {
     color: #0f172a !important;
 }
 
-/* Métricas internas con un toque azul institucional suave */
+/* Métricas destacadas en bloques amarillos con letras negras */
 div.window-risk div[data-testid="stMetric"] {
-    background-color: #f0f4ff !important;
-    border: 1px solid #d1d9f0 !important;
+    background-color: #ffcc00 !important;
+    border: 2px solid #0f172a !important;
     border-radius: 10px !important;
     padding: 12px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #0033cc !important;
-    font-weight: 800 !important;
+    color: #000000 !important;
+    font-weight: 900 !important;
 }

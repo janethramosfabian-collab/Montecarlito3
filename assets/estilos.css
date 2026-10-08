@@ -1,5 +1,5 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos Blancos Forzados)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos y Subtítulos Blancos)
    ========================================================= */
 
 .stApp {
@@ -12,13 +12,14 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* 1. TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO (Máxima especificidad) */
+/* 1. TODOS LOS TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO (Cubre H1, H2, H3, H4 y contenedores internos) */
 .stApp h1, .stApp h2, .stApp h3, .stApp h4, 
 .stApp div[data-testid="stMarkdownContainer"] h1, 
 .stApp div[data-testid="stMarkdownContainer"] h2, 
 .stApp div[data-testid="stMarkdownContainer"] h3, 
 .stApp div[data-testid="stMarkdownContainer"] h4,
-span[data-testid="stHeader"], .stHeadingContainer h1, .stHeadingContainer h2 {
+.stHeadingContainer, .stHeadingContainer *, 
+div[data-testid="stSubheader"], span[data-testid="stSubheader"] {
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }

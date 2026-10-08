@@ -1,43 +1,44 @@
 /* =========================================================
-   ESTÉTICA DINÁMICA Y VARIADA (Alto Contraste y Jerarquía)
+   ESTÉTICA INSTITUCIONAL FINANCIERA (Inspiración 365 Dark Mode)
    ========================================================= */
 
-/* 1. Fondo General de la Aplicación (Azul eléctrico vibrante) */
+/* 1. Fondo General y Estilos Base */
 .stApp {
-    background-color: #0044ff !important;
-    color: #ffffff !important;
+    background-color: #070D1B !important; /* Azul medianoche oscuro y elegante */
+    color: #FFFFFF !important;
+    font-family: 'Source Sans Pro', sans-serif, -apple-system, BlinkMacSystemFont;
 }
 
 header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Títulos principales H1: En blanco puro imponente sobre el fondo azul */
+/* Títulos principales (H1) en blanco puro, limpios y profesionales */
 .stApp h1 {
-    font-size: 2.3rem !important;
-    font-weight: 900 !important;
-    color: #ffffff !important;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.5px;
 }
 
-/* Subtítulos (h2, h3): En NEGRO PROFUNDO sobre el fondo azul para dar variedad y vida */
+/* Subtítulos (H2, H3, H4) en blanco o gris muy claro */
 .stApp h2, .stApp h3, .stApp h4 {
-    color: #0f172a !important;
-    font-weight: 900 !important;
+    color: #F8FAFC !important;
+    font-weight: 600 !important;
 }
 
-/* Párrafos y etiquetas generales sobre el fondo azul en blanco suave */
+/* Textos generales y etiquetas en gris suave institucional para evitar fatiga visual */
 .stApp p, .stApp label, .stApp span {
-    color: #f8fafc !important;
-    font-weight: 600;
+    color: #94A3B8 !important;
+    font-weight: 400;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR) - Azul Oscuro Diferenciado
+   2. BARRA LATERAL (SIDEBAR) - Panel Lateral Ejecutivo
    ========================================================= */
 section[data-testid="stSidebar"] {
-    background-color: #0033cc !important;
-    border-right: 2px solid #ffcc00 !important;
+    background-color: #0B132B !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 section[data-testid="stSidebar"] span, 
@@ -46,85 +47,64 @@ section[data-testid="stSidebar"] label,
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 {
-    color: #ffffff !important;
+    color: #E2E8F0 !important;
 }
 
 /* =========================================================
-   3. CUADROS CLAROS (Expansores y Contenedores) - Fondo Claro con Letras Negras/Azules
+   3. CONTENEDORES Y EXPANSORES (Tarjetas Oscuras Sofisticadas)
    ========================================================= */
-div[data-testid="stExpander"] {
-    background-color: #ffffff !important; /* Fondo claro */
-    border: 3px solid #0f172a !important; /* Borde oscuro definido */
-    border-radius: 16px !important;       /* Bordes bien redondeados */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25) !important;
+.stAlert, div[data-testid="stExpander"] {
+    background-color: #111A30 !important; /* Tarjeta azul oscura corporativa */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Letras estrictamente negras o azul oscuro dentro de los cuadros claros */
-div[data-testid="stExpander"] *, 
-div[data-testid="stExpander"] p, 
-div[data-testid="stExpander"] span, 
-div[data-testid="stExpander"] label {
-    color: #0f172a !important;
-    font-weight: 700 !important;
+.stAlert *, div[data-testid="stExpander"] * {
+    color: #E2E8F0 !important;
 }
 
 /* =========================================================
-   4. CAJAS DE ALERTA (Diseño Especial: Fondo Amarillo con Letras Negras)
-   ========================================================= */
-.stAlert {
-    background-color: #ffcc00 !important; /* Fondo amarillo vibrante */
-    border: 3px solid #0f172a !important; /* Borde oscuro de alto contraste */
-    border-radius: 16px !important;       /* Bordes redondeados */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Letras y elementos dentro de la alerta en negro absoluto */
-.stAlert *, .stAlert p, .stAlert span {
-    color: #000000 !important;
-    font-weight: 800 !important;
-}
-
-/* =========================================================
-   5. CAJAS DE ENTRADA (INPUTS Y SELECTORES)
+   4. CAMPOS DE ENTRADA (Inputs y Selectores)
    ========================================================= */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-    border-radius: 12px !important;
-    border: 2px solid #0f172a !important;
-    font-weight: 700 !important;
+    background-color: #16223D !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    font-weight: 500 !important;
 }
 
 /* =========================================================
-   6. BOTONES (Cuadros Amarillos con Letras Negras y Bordes Redondeados)
+   5. BOTONES (Estilo Botón Principal Azul Financiero)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #ffcc00 !important; /* Cuadro amarillo llamativo */
-    color: #000000 !important;            /* Letras negras adentro */
-    font-weight: 900 !important;
-    border-radius: 14px !important;       /* Redondeado moderno */
-    border: 3px solid #0f172a !important;
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3) !important;
-    transition: all 0.2s ease-in-out;
+    background-color: #0066FF !important; /* Azul eléctrico profesional corporativo */
+    color: #FFFFFF !important;            /* Texto blanco impecable */
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.3) !important;
+    transition: background-color 0.2s ease;
 }
 
 button[kind="primary"]:hover, div.stButton > button:hover {
-    background-color: #ffe066 !important;
-    color: #000000 !important;
+    background-color: #0052CC !important;
+    color: #FFFFFF !important;
 }
 
 /* =========================================================
-   7. CONTENEDOR DE RESULTADOS Y MÉTRICAS
+   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Estilo Dashboard Ejecutivo)
    ========================================================= */
 div.window-risk {
-    background-color: #ffffff !important; /* Zona de resultados limpia y blanca */
-    border: 3px solid #0f172a !important;
-    border-radius: 20px !important;       /* Esquinas muy redondeadas y elegantes */
+    background-color: #111A30 !important; /* Panel de resultados oscuro y limpio */
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 16px !important;
     padding: 24px !important;
-    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
     margin-top: 20px !important;
 }
 
@@ -137,18 +117,18 @@ div.window-risk h1,
 div.window-risk h2,
 div.window-risk h3,
 div.window-risk h4 {
-    color: #0f172a !important;
+    color: #FFFFFF !important;
 }
 
-/* Tarjetas de Métricas dentro de resultados: Combinación amarilla con letras negras */
+/* Tarjetas de Métricas Internas */
 div.window-risk div[data-testid="stMetric"] {
-    background-color: #ffcc00 !important; /* Fondo amarillo */
-    border: 2px solid #0f172a !important;
-    border-radius: 12px !important;
-    padding: 12px !important;
+    background-color: #16223D !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    padding: 14px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #000000 !important; /* Letras negras adentro */
-    font-weight: 900 !important;
+    color: #38BDF8 !important; /* Acento cian financiero moderno para los valores clave */
+    font-weight: 700 !important;
 }

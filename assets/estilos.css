@@ -1,10 +1,10 @@
 /* =========================================================
-   ESTÉTICA INSTITUCIONAL FINANCIERA (Inspiración 365 Dark Mode)
+   ESTÉTICA FINANCIERA INSTITUCIONAL DEFINITIVA (Dark Mode 365)
    ========================================================= */
 
 /* 1. Fondo General y Estilos Base */
 .stApp {
-    background-color: #070D1B !important; /* Azul medianoche oscuro y elegante */
+    background-color: #070D1B !important;
     color: #FFFFFF !important;
     font-family: 'Source Sans Pro', sans-serif, -apple-system, BlinkMacSystemFont;
 }
@@ -13,32 +13,24 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Títulos principales (H1) en blanco puro, limpios y profesionales */
-.stApp h1 {
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
+/* Títulos y subtítulos principales en blanco puro nítido */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4 {
     color: #FFFFFF !important;
-    letter-spacing: -0.5px;
+    font-weight: 700 !important;
 }
 
-/* Subtítulos (H2, H3, H4) en blanco o gris muy claro */
-.stApp h2, .stApp h3, .stApp h4 {
-    color: #F8FAFC !important;
-    font-weight: 600 !important;
-}
-
-/* Textos generales y etiquetas en gris suave institucional para evitar fatiga visual */
+/* Textos generales y etiquetas secundarias */
 .stApp p, .stApp label, .stApp span {
     color: #94A3B8 !important;
     font-weight: 400;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR) - Panel Lateral Ejecutivo
+   2. BARRA LATERAL (SIDEBAR)
    ========================================================= */
 section[data-testid="stSidebar"] {
     background-color: #0B132B !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-right: 1px solid rgba(0, 102, 255, 0.2) !important;
 }
 
 section[data-testid="stSidebar"] span, 
@@ -51,43 +43,47 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES Y EXPANSORES (Tarjetas Oscuras Sofisticadas)
+   3. CONTENEDORES, EXPANSORES Y BLOQUES DE CÓDIGO/FÓRMULA
    ========================================================= */
-.stAlert, div[data-testid="stExpander"] {
-    background-color: #111A30 !important; /* Tarjeta azul oscura corporativa */
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+.stAlert, div[data-testid="stExpander"], div[data-baseweb="card"] {
+    background-color: #111A30 !important;
+    border: 1px solid rgba(0, 102, 255, 0.3) !important; /* Toque sutil de azul eléctrico */
     border-radius: 12px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
 .stAlert *, div[data-testid="stExpander"] * {
-    color: #E2E8F0 !important;
+    color: #FFFFFF !important;
 }
 
-/* =========================================================
-   4. CAMPOS DE ENTRADA (Inputs y Selectores)
-   ========================================================= */
+/* Estilo para el editor de código / fórmula y cajas de texto */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
-div[data-testid="stNumberInput"] input {
+div[data-testid="stNumberInput"] input,
+div.ace_editor {
     background-color: #16223D !important;
     color: #FFFFFF !important;
     border-radius: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Borde con toque de azul eléctrico */
     font-weight: 500 !important;
 }
 
+/* Forzar que los textos dentro de inputs y editores sean blancos */
+input, textarea, .ace_content {
+    color: #FFFFFF !important;
+}
+
 /* =========================================================
-   5. BOTONES (Estilo Botón Principal Azul Financiero)
+   4. BOTONES (Azul Eléctrico Profesional con Letras Blancas)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #0066FF !important; /* Azul eléctrico profesional corporativo */
-    color: #FFFFFF !important;            /* Texto blanco impecable */
+    background-color: #0066FF !important; /* Azul eléctrico profesional */
+    color: #FFFFFF !important;            /* Letras blancas adentro */
     font-weight: 600 !important;
     border-radius: 8px !important;
-    border: none !important;
-    box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.3) !important;
+    border: 1px solid #38BDF8 !important; /* Toque de luz cian/azul */
+    box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.35) !important;
     transition: background-color 0.2s ease;
 }
 
@@ -97,11 +93,11 @@ button[kind="primary"]:hover, div.stButton > button:hover {
 }
 
 /* =========================================================
-   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Estilo Dashboard Ejecutivo)
+   5. CONTENEDOR DE RESULTADOS Y CAJAS AZULES FUERTES
    ========================================================= */
 div.window-risk {
-    background-color: #111A30 !important; /* Panel de resultados oscuro y limpio */
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background-color: #111A30 !important;
+    border: 1px solid rgba(0, 102, 255, 0.4) !important;
     border-radius: 16px !important;
     padding: 24px !important;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
@@ -117,18 +113,18 @@ div.window-risk h1,
 div.window-risk h2,
 div.window-risk h3,
 div.window-risk h4 {
-    color: #FFFFFF !important;
+    color: #FFFFFF !important; /* Letras blancas adentro de los bloques de resultados */
 }
 
-/* Tarjetas de Métricas Internas */
+/* Tarjetas de Métricas Internas (Cajas de azul fuerte con letras blancas) */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #16223D !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(0, 102, 255, 0.5) !important;
     border-radius: 10px !important;
     padding: 14px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #38BDF8 !important; /* Acento cian financiero moderno para los valores clave */
+    color: #38BDF8 !important; /* Acento cian/azul eléctrico brillante para los valores */
     font-weight: 700 !important;
 }

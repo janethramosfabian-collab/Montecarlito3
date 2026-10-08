@@ -1,5 +1,5 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Corrección Definitiva)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Ajuste Fino Exacto)
    ========================================================= */
 
 .stApp {
@@ -12,7 +12,7 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO PURO */
+/* 1. ÚNICAMENTE TÍTULOS Y SUBTÍTULOS EN BLANCO */
 .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
     color: #FFFFFF !important;
     font-weight: 700 !important;
@@ -42,7 +42,7 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES Y TARJETAS GENERALES
+   3. CONTENEDORES Y TARJETAS GENERALES (Mantienen su diseño oscuro original)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
     background-color: #111A30 !important;
@@ -55,25 +55,24 @@ section[data-testid="stSidebar"] h3 {
     color: #FFFFFF !important;
 }
 
-/* Inputs de texto, números y selectores (Fondo blanco, borde azul eléctrico, texto oscuro) */
+/* Inputs normales (Texto, Números, Selectores) se mantienen en su tono oscuro original */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
-    background-color: #FFFFFF !important;
-    color: #0F172A !important;
-    border-radius: 10px !important;
-    border: 2px solid #0066FF !important; /* Borde azul eléctrico */
-    font-weight: 600 !important;
+    background-color: #16223D !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    font-weight: 500 !important;
 }
 
 /* =========================================================
-   4. CUADRO DE FÓRMULA (CODE EDITOR) - Fondo Blanco y Borde Azul
+   4. EXCLUSIVO: SOLAMENTE LA BARRA DE FÓRMULAS DE BLANCO CON BORDES AZULES
    ========================================================= */
-/* Contenedor principal del editor de código */
 div[data-testid="stVerticalBlock"] iframe {
     background-color: #FFFFFF !important;
-    border: 2px solid #0066FF !important; /* Borde azul eléctrico idéntico a los inputs */
+    border: 2px solid #0066FF !important;
     border-radius: 12px !important;
 }
 
@@ -118,7 +117,6 @@ div.window-risk h4 {
     color: #FFFFFF !important;
 }
 
-/* Tarjetas de Métricas Internas */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #16223D !important;
     border: 1.5px solid rgba(0, 102, 255, 0.6) !important;

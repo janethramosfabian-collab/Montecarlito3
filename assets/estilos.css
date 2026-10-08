@@ -43,12 +43,12 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES, EXPANSORES Y BLOQUES DE CÓDIGO/FÓRMULA
+   3. CONTENEDORES, EXPANSORES Y CAJAS DE ENTRADA (FÓRMULAS)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"], div[data-baseweb="card"] {
     background-color: #111A30 !important;
-    border: 1px solid rgba(0, 102, 255, 0.3) !important; /* Toque sutil de azul eléctrico */
-    border-radius: 12px !important;
+    border: 1px solid rgba(0, 102, 255, 0.35) !important; /* Toque sutil de azul eléctrico */
+    border-radius: 14px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -56,33 +56,47 @@ section[data-testid="stSidebar"] h3 {
     color: #FFFFFF !important;
 }
 
-/* Estilo para el editor de código / fórmula y cajas de texto */
+/* Inputs de texto, números y selectores con bordes redondeados y estilo oscuro */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
-div[data-testid="stNumberInput"] input,
-div.ace_editor {
-    background-color: #16223D !important;
+div[data-testid="stNumberInput"] input {
+    background-color: #111A30 !important;
     color: #FFFFFF !important;
-    border-radius: 8px !important;
-    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Borde con toque de azul eléctrico */
+    border-radius: 12px !important;
+    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
     font-weight: 500 !important;
 }
 
-/* Forzar que los textos dentro de inputs y editores sean blancos */
-input, textarea, .ace_content {
+/* =========================================================
+   4. ESTILIZACIÓN ESPECÍFICA PARA EL CODE EDITOR (Fórmula)
+   ========================================================= */
+/* Contenedor externo del editor de código */
+iframe {
+    border-radius: 14px !important;
+}
+
+div.ace_editor, div.ace_scroller, div.ace_content {
+    background-color: #111A30 !important;
     color: #FFFFFF !important;
+    border-radius: 12px !important;
+}
+
+/* Forzar bordes y estilo tipo tarjeta al componente del editor de código */
+div[data-testid="stVerticalBlock"] iframe {
+    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
+    border-radius: 14px !important;
 }
 
 /* =========================================================
-   4. BOTONES (Azul Eléctrico Profesional con Letras Blancas)
+   5. BOTONES (Azul Eléctrico Profesional con Letras Blancas)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
     background-color: #0066FF !important; /* Azul eléctrico profesional */
     color: #FFFFFF !important;            /* Letras blancas adentro */
     font-weight: 600 !important;
-    border-radius: 8px !important;
-    border: 1px solid #38BDF8 !important; /* Toque de luz cian/azul */
+    border-radius: 10px !important;
+    border: 1px solid #38BDF8 !important; /* Toque de luz azul/cian */
     box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.35) !important;
     transition: background-color 0.2s ease;
 }
@@ -93,11 +107,11 @@ button[kind="primary"]:hover, div.stButton > button:hover {
 }
 
 /* =========================================================
-   5. CONTENEDOR DE RESULTADOS Y CAJAS AZULES FUERTES
+   6. CONTENEDOR DE RESULTADOS Y CAJAS AZULES FUERTES
    ========================================================= */
 div.window-risk {
     background-color: #111A30 !important;
-    border: 1px solid rgba(0, 102, 255, 0.4) !important;
+    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
     border-radius: 16px !important;
     padding: 24px !important;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
@@ -113,18 +127,18 @@ div.window-risk h1,
 div.window-risk h2,
 div.window-risk h3,
 div.window-risk h4 {
-    color: #FFFFFF !important; /* Letras blancas adentro de los bloques de resultados */
+    color: #FFFFFF !important; /* Letras blancas en los resultados y títulos internos */
 }
 
-/* Tarjetas de Métricas Internas (Cajas de azul fuerte con letras blancas) */
+/* Tarjetas de Métricas Internas (Cajas de azul fuerte con bordes redondeados y letras blancas) */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #16223D !important;
-    border: 1px solid rgba(0, 102, 255, 0.5) !important;
-    border-radius: 10px !important;
+    border: 1.5px solid rgba(0, 102, 255, 0.5) !important;
+    border-radius: 12px !important;
     padding: 14px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #38BDF8 !important; /* Acento cian/azul eléctrico brillante para los valores */
+    color: #38BDF8 !important; /* Acento azul eléctrico brillante para los valores */
     font-weight: 700 !important;
 }

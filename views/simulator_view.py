@@ -27,14 +27,11 @@ def render_simulator():
         with c2:
             st.write('##### Fórmula de la simulación')
             
-            # Editor de código limpio integrado con la tarjeta oscura del CSS global
+            # Llamada segura y limpia a code_editor compatible con todas sus versiones
             parformula = code_editor(
                 '', 
                 lang='python', 
-                response_mode='blur',
-                theme="dark",
-                options={"showLineNumbers": False, "wrap": True},
-                css_file=None
+                response_mode='blur'
             )
             
         st.info('Ingrese la fórmula de la simulación. Utilice las variables entre llaves dobles. Por ejemplo, si la fórmula es `X1+X2`, debe ingresar `{{X1}}+{{X2}}`', icon=":material/info:")

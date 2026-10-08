@@ -1,33 +1,49 @@
 /* =========================================================
-   1. FONDO GENERAL Y TITULO PRINCIPAL
+   1. ESTILOS GENERALES Y FONDO PRINCIPAL (Inspiración Corporativa Limpia)
    ========================================================= */
 .stApp {
-    background-color: #0b132b !important;
-    color: #f8fafc !important;
+    background-color: #f4f6f9 !important; /* Fondo general gris muy suave y elegante */
+    color: #1e293b !important;
 }
 
 header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Mantener el título principal H1 grande y prominente */
+/* Título principal H1 grande, prominente y con el azul institucional */
 .stApp h1 {
     font-size: 2.25rem !important;
     font-weight: 700 !important;
-    color: #ffffff !important;
+    color: #002D62 !important; /* Azul marino institucional fuerte */
 }
 
 /* =========================================================
-   2. CAJAS Y BLOQUES INFORMATIVOS
+   2. BARRA LATERAL (SIDEBAR) ELEGANTE
+   ========================================================= */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
+}
+
+section[data-testid="stSidebar"], 
+section[data-testid="stSidebar"] span, 
+section[data-testid="stSidebar"] p, 
+section[data-testid="stSidebar"] label {
+    color: #1e293b !important; /* Letras oscuras y nítidas sobre fondo blanco */
+}
+
+/* =========================================================
+   3. CAJAS Y BLOQUES INFORMATIVOS (Estilo Tarjeta Limpia)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"] {
-    background-color: #1e293b !important;
-    border: 1px solid #334155 !important;
-    border-radius: 8px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* =========================================================
-   3. CAJAS DE ENTRADA (NUMEROS / TEXTO) Y SELECCION
+   4. CAJAS DE ENTRADA (NUMEROS / TEXTO) Y SELECCION
    ========================================================= */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
@@ -35,20 +51,20 @@ div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
     background-color: #ffffff !important;
     color: #0f172a !important;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
     border: 1px solid #94a3b8 !important;
     font-weight: 600 !important;
 }
 
 /* =========================================================
-   4. PANEL Y CONTENEDOR DE RESULTADOS
+   5. PANEL Y CONTENEDOR DE RESULTADOS (Inspiración Tarjetas Azules / Blancas)
    ========================================================= */
 div.window-risk {
-    background-color: #f8fafc !important;
-    border: 2px solid #cbd5e1 !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4) !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 24px !important;
+    box-shadow: 0px 10px 30px rgba(0, 45, 98, 0.08) !important; /* Sombra suave con tinte azulado */
     margin-top: 15px !important;
 }
 
@@ -64,14 +80,15 @@ div.window-risk h4 {
     color: #0f172a !important;
 }
 
+/* Métricas internas con estilo limpio y acento azul corporativo */
 div.window-risk div[data-testid="stMetric"] {
-    background-color: #e0f2fe !important;
-    border: 1px solid #bae6fd !important;
-    border-radius: 8px !important;
-    padding: 10px !important;
+    background-color: #f0f4f8 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #0369a1 !important;
+    color: #0044cc !important; /* Azul vibrante estilo tarjeta */
     font-weight: 700 !important;
 }

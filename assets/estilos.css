@@ -2,7 +2,6 @@
    ESTÉTICA FINANCIERA INSTITUCIONAL DEFINITIVA (Dark Mode 365)
    ========================================================= */
 
-/* 1. Fondo General y Estilos Base */
 .stApp {
     background-color: #070D1B !important;
     color: #FFFFFF !important;
@@ -19,9 +18,9 @@ header[data-testid="stHeader"] {
     font-weight: 700 !important;
 }
 
-/* Textos generales y etiquetas secundarias */
-.stApp p, .stApp label, .stApp span {
-    color: #94A3B8 !important;
+/* Textos generales, etiquetas y subtítulos */
+.stApp p, .stApp label, .stApp span, .stMarkdown {
+    color: #E2E8F0 !important;
     font-weight: 400;
 }
 
@@ -30,7 +29,7 @@ header[data-testid="stHeader"] {
    ========================================================= */
 section[data-testid="stSidebar"] {
     background-color: #0B132B !important;
-    border-right: 1px solid rgba(0, 102, 255, 0.2) !important;
+    border-right: 1px solid rgba(0, 102, 255, 0.25) !important;
 }
 
 section[data-testid="stSidebar"] span, 
@@ -43,11 +42,11 @@ section[data-testid="stSidebar"] h3 {
 }
 
 /* =========================================================
-   3. CONTENEDORES, EXPANSORES Y CAJAS DE ENTRADA (FÓRMULAS)
+   3. CONTENEDORES, EXPANSORES Y TARJETAS (Azul Oscuro + Bordes Azul Eléctrico)
    ========================================================= */
-.stAlert, div[data-testid="stExpander"], div[data-baseweb="card"] {
+.stAlert, div[data-testid="stExpander"], div[data-baseweb="card"], div[data-testid="stContainer"] {
     background-color: #111A30 !important;
-    border: 1px solid rgba(0, 102, 255, 0.35) !important; /* Toque sutil de azul eléctrico */
+    border: 1px solid rgba(0, 102, 255, 0.4) !important; /* Toque de azul eléctrico */
     border-radius: 14px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
@@ -56,36 +55,25 @@ section[data-testid="stSidebar"] h3 {
     color: #FFFFFF !important;
 }
 
-/* Inputs de texto, números y selectores con bordes redondeados y estilo oscuro */
+/* Inputs de texto, números y selectores */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
-    background-color: #111A30 !important;
+    background-color: #16223D !important;
     color: #FFFFFF !important;
-    border-radius: 12px !important;
-    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(0, 102, 255, 0.5) !important;
     font-weight: 500 !important;
 }
 
 /* =========================================================
-   4. ESTILIZACIÓN ESPECÍFICA PARA EL CODE EDITOR (Fórmula)
+   4. ESTILIZACIÓN DE IFRAMES Y EDITORES DE CÓDIGO
    ========================================================= */
-/* Contenedor externo del editor de código */
 iframe {
+    border: 1.5px solid rgba(0, 102, 255, 0.5) !important;
     border-radius: 14px !important;
-}
-
-div.ace_editor, div.ace_scroller, div.ace_content {
     background-color: #111A30 !important;
-    color: #FFFFFF !important;
-    border-radius: 12px !important;
-}
-
-/* Forzar bordes y estilo tipo tarjeta al componente del editor de código */
-div[data-testid="stVerticalBlock"] iframe {
-    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
-    border-radius: 14px !important;
 }
 
 /* =========================================================
@@ -93,12 +81,11 @@ div[data-testid="stVerticalBlock"] iframe {
    ========================================================= */
 button[kind="primary"], div.stButton > button {
     background-color: #0066FF !important; /* Azul eléctrico profesional */
-    color: #FFFFFF !important;            /* Letras blancas adentro */
+    color: #FFFFFF !important;            /* Letras blancas */
     font-weight: 600 !important;
     border-radius: 10px !important;
-    border: 1px solid #38BDF8 !important; /* Toque de luz azul/cian */
+    border: 1px solid #38BDF8 !important; /* Toque de luz cian/azul */
     box-shadow: 0px 4px 12px rgba(0, 102, 255, 0.35) !important;
-    transition: background-color 0.2s ease;
 }
 
 button[kind="primary"]:hover, div.stButton > button:hover {
@@ -111,7 +98,7 @@ button[kind="primary"]:hover, div.stButton > button:hover {
    ========================================================= */
 div.window-risk {
     background-color: #111A30 !important;
-    border: 1.5px solid rgba(0, 102, 255, 0.4) !important;
+    border: 1.5px solid rgba(0, 102, 255, 0.5) !important;
     border-radius: 16px !important;
     padding: 24px !important;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
@@ -127,18 +114,18 @@ div.window-risk h1,
 div.window-risk h2,
 div.window-risk h3,
 div.window-risk h4 {
-    color: #FFFFFF !important; /* Letras blancas en los resultados y títulos internos */
+    color: #FFFFFF !important;
 }
 
 /* Tarjetas de Métricas Internas (Cajas de azul fuerte con bordes redondeados y letras blancas) */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #16223D !important;
-    border: 1.5px solid rgba(0, 102, 255, 0.5) !important;
+    border: 1.5px solid rgba(0, 102, 255, 0.6) !important;
     border-radius: 12px !important;
     padding: 14px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #38BDF8 !important; /* Acento azul eléctrico brillante para los valores */
+    color: #38BDF8 !important; /* Acento azul eléctrico brillante */
     font-weight: 700 !important;
 }

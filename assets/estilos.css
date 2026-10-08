@@ -1,73 +1,108 @@
 /* =========================================================
-   1. ESTILOS GENERALES Y FONDO PRINCIPAL (Inspiración Corporativa Limpia)
+   ESTÉTICA FINANCIERA UNICA (Inspiración 365 Financial Analyst)
    ========================================================= */
+
+/* 1. Fondo General de la Aplicación (Azul eléctrico vibrante y profundo) */
 .stApp {
-    background-color: #f4f6f9 !important; /* Fondo general gris muy suave y elegante */
-    color: #1e293b !important;
+    background-color: #0044ff !important; /* Azul eléctrico característico */
+    color: #ffffff !important;
 }
 
 header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Título principal H1 grande, prominente y con el azul institucional */
+/* Título principal H1 grande, blanco y con acentos limpios */
 .stApp h1 {
-    font-size: 2.25rem !important;
-    font-weight: 700 !important;
-    color: #002D62 !important; /* Azul marino institucional fuerte */
+    font-size: 2.3rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+}
+
+/* Subtítulos y textos generales claros */
+.stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span {
+    color: #ffffff !important;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR) ELEGANTE
+   2. BARRA LATERAL (SIDEBAR) - Tono Azul Diferenciado
    ========================================================= */
 section[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    border-right: 1px solid #e2e8f0 !important;
+    background-color: #0033cc !important; /* Tono azul más oscuro para diferenciar la barra lateral */
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
-section[data-testid="stSidebar"], 
 section[data-testid="stSidebar"] span, 
 section[data-testid="stSidebar"] p, 
-section[data-testid="stSidebar"] label {
-    color: #1e293b !important; /* Letras oscuras y nítidas sobre fondo blanco */
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
 }
 
 /* =========================================================
-   3. CAJAS Y BLOQUES INFORMATIVOS (Estilo Tarjeta Limpia)
+   3. CONTENEDORES Y TARJETAS PRINCIPALES (Paneles Azules / Grises Oscuros Sofisticados)
    ========================================================= */
+div[data-testid="stVerticalBlock"] > div[style*="border"] {
+    background-color: rgba(0, 30, 120, 0.5) !important; /* Panel traslúcido tono azul diferenciado */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+}
+
 .stAlert, div[data-testid="stExpander"] {
-    background-color: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
+    background-color: #0033cc !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 10px !important;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04) !important;
+    color: #ffffff !important;
 }
 
 /* =========================================================
-   4. CAJAS DE ENTRADA (NUMEROS / TEXTO) Y SELECCION
+   4. CAJAS DE ENTRADA (INPUTS Y SELECTORES)
    ========================================================= */
 div[data-baseweb="input"],
 div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
     background-color: #ffffff !important;
-    color: #0f172a !important;
+    color: #0f172a !important; /* Letras oscuras dentro de las cajas para legibilidad total */
     border-radius: 8px !important;
-    border: 1px solid #94a3b8 !important;
+    border: 1px solid #cbd5e1 !important;
     font-weight: 600 !important;
 }
 
 /* =========================================================
-   5. PANEL Y CONTENEDOR DE RESULTADOS (Inspiración Tarjetas Azules / Blancas)
+   5. BOTONES PRINCIPALES (Estilo Amarillo / Dorado Característico)
    ========================================================= */
-div.window-risk {
-    background-color: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 14px !important;
-    padding: 24px !important;
-    box-shadow: 0px 10px 30px rgba(0, 45, 98, 0.08) !important; /* Sombra suave con tinte azulado */
-    margin-top: 15px !important;
+button[kind="primary"], div.stButton > button {
+    background-color: #ffcc00 !important; /* Amarillo vibrante de llamada a la acción */
+    color: #0f172a !important;            /* Texto oscuro fuerte para contraste perfecto */
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s ease-in-out;
 }
 
+button[kind="primary"]:hover, div.stButton > button:hover {
+    background-color: #e6b800 !important;
+    color: #000000 !important;
+}
+
+/* =========================================================
+   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Estilo Tarjetas Diferenciadas)
+   ========================================================= */
+div.window-risk {
+    background-color: #ffffff !important; /* Fondo blanco puro para resaltar los gráficos y datos tabulares */
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25) !important;
+    margin-top: 20px !important;
+}
+
+/* Asegurar que dentro de la ventana de resultados el texto sea oscuro y legible */
 div.window-risk,
 div.window-risk *,
 div.window-risk p,
@@ -80,15 +115,15 @@ div.window-risk h4 {
     color: #0f172a !important;
 }
 
-/* Métricas internas con estilo limpio y acento azul corporativo */
+/* Métricas internas con un toque azul institucional suave */
 div.window-risk div[data-testid="stMetric"] {
-    background-color: #f0f4f8 !important;
-    border: 1px solid #d1d5db !important;
+    background-color: #f0f4ff !important;
+    border: 1px solid #d1d9f0 !important;
     border-radius: 10px !important;
     padding: 12px !important;
 }
 
 div.window-risk div[data-testid="stMetricValue"] div {
-    color: #0044cc !important; /* Azul vibrante estilo tarjeta */
-    font-weight: 700 !important;
+    color: #0033cc !important;
+    font-weight: 800 !important;
 }

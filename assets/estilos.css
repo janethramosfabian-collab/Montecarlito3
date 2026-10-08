@@ -1,5 +1,5 @@
 /* =========================================================
-   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos y Subtítulos Blancos)
+   ESTÉTICA FINANCIERA INSTITUCIONAL (Títulos Blancos Garantizados)
    ========================================================= */
 
 .stApp {
@@ -12,19 +12,24 @@ header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* 1. TODOS LOS TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO (Cubre H1, H2, H3, H4 y contenedores internos) */
-.stApp h1, .stApp h2, .stApp h3, .stApp h4, 
+/* =========================================================
+   1. REGULARES DE TÍTULOS Y SUBTÍTULOS ESTRICTAMENTE EN BLANCO
+   ========================================================= */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
 .stApp div[data-testid="stMarkdownContainer"] h1, 
 .stApp div[data-testid="stMarkdownContainer"] h2, 
 .stApp div[data-testid="stMarkdownContainer"] h3, 
 .stApp div[data-testid="stMarkdownContainer"] h4,
-.stHeadingContainer, .stHeadingContainer *, 
-div[data-testid="stSubheader"], span[data-testid="stSubheader"] {
+.stApp div[data-testid="stMarkdownContainer"] h5,
+.stApp div[data-testid="stMarkdownContainer"] h6,
+.stHeadingContainer *, 
+div[data-testid="stSubheader"] *, 
+span[data-testid="stSubheader"] * {
     color: #FFFFFF !important;
     font-weight: 700 !important;
 }
 
-/* Textos generales y etiquetas secundarias en gris institucional */
+/* Textos generales, etiquetas y párrafos secundarios en gris institucional */
 .stApp p, .stApp label, .stApp span, .stMarkdown {
     color: #94A3B8 !important;
     font-weight: 400;
@@ -74,7 +79,7 @@ div[data-testid="stNumberInput"] input {
 }
 
 /* =========================================================
-   4. EXCLUSIVO: SOLAMENTE LA BARRA DE FÓRMULAS DE BLANCO CON BORDES AZULES
+   4. EXCLUSIVO: BARRA DE FÓRMULAS DE BLANCO CON BORDES AZULES
    ========================================================= */
 div[data-testid="stVerticalBlock"] iframe {
     background-color: #FFFFFF !important;

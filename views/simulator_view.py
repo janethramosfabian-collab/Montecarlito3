@@ -24,9 +24,37 @@ def render_simulator():
         with c1:
             parVariableResultado = st.text_input('Variable resultado', 'Resultado')
             
-        with c2:
+with c2:
             st.write('##### Fórmula de la simulación')
-            parformula = code_editor('', lang='python', response_mode='blur')
+            
+            # Configuración de tema oscuro y bordes para el editor de código
+            custom_theme = {
+                "name": "dark_financial",
+                "cursorColor": "#FFFFFF",
+                "selectionColor": "#0066FF",
+                "showGutter": False,
+                "highlightActiveLine": False,
+                "fontSize": "14px"
+            }
+            custom_css = """
+                .ace_editor {
+                    background-color: #111A30 !important;
+                    color: #FFFFFF !important;
+                    border-radius: 12px !important;
+                }
+                .ace_scroller {
+                    background-color: #111A30 !important;
+                }
+            """
+            
+            parformula = code_editor(
+                '', 
+                lang='python', 
+                response_mode='blur',
+                theme="dark",
+                options={"showLineNumbers": False, "wrap": True},
+                css_file=None
+            )
             
         st.info('Ingrese la fórmula de la simulación. Utilice las variables entre llaves dobles. Por ejemplo, si la fórmula es `X1+X2`, debe ingresar `{{X1}}+{{X2}}`', icon=":material/info:")
         

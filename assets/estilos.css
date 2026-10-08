@@ -1,29 +1,41 @@
 /* =========================================================
-   ESTÉTICA DINÁMICA DE ALTO CONTRASTE (Azul Eléctrico + Negro + Amarillo)
+   ESTÉTICA ESTRATÉGICA DE ALTO CONTRASTE Y JERARQUÍA VISUAL
    ========================================================= */
 
 /* 1. Fondo General de la Aplicación (Azul eléctrico vibrante) */
 .stApp {
     background-color: #0044ff !important;
-    color: #0f172a !important; /* Letras negras sobre el fondo azul para dar vida y contraste */
+    color: #ffffff !important; /* Letras blancas principales sobre el fondo azul para máxima elegancia */
 }
 
 header[data-testid="stHeader"] {
     background-color: transparent !important;
 }
 
-/* Todos los textos principales (títulos, párrafos, etiquetas) en negro sobre el fondo azul */
-.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp p, .stApp label, .stApp span {
-    color: #0f172a !important; 
-    font-weight: 700;
+/* Títulos principales grandes en blanco puro para destacar sobre el azul */
+.stApp h1 {
+    font-size: 2.3rem !important;
+    font-weight: 900 !important;
+    color: #ffffff !important;
+}
+
+/* Subtítulos y textos de soporte en el fondo azul con excelente visibilidad */
+.stApp h2, .stApp h3, .stApp h4 {
+    color: #ffffff !important;
+    font-weight: 800;
+}
+
+.stApp p, .stApp label, .stApp span {
+    color: #f8fafc !important; /* Blanco suave muy legible sobre azul */
+    font-weight: 600;
 }
 
 /* =========================================================
-   2. BARRA LATERAL (SIDEBAR)
+   2. BARRA LATERAL (SIDEBAR) - Tono Azul Distinto y Limpio
    ========================================================= */
 section[data-testid="stSidebar"] {
     background-color: #0033cc !important;
-    border-right: 2px solid #0f172a !important;
+    border-right: 2px solid #ffffff !important;
 }
 
 section[data-testid="stSidebar"] span, 
@@ -32,19 +44,20 @@ section[data-testid="stSidebar"] label,
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 {
-    color: #ffffff !important; /* Texto blanco en la barra lateral para legibilidad sobre azul oscuro */
+    color: #ffffff !important;
 }
 
 /* =========================================================
-   3. CONTENEDORES Y EXPANSORES (Estilo Cuadros Dinámicos)
+   3. CONTENEDORES, ALERTAS Y EXPANSORES (Cuadros Claros con Bordes Redondeados)
    ========================================================= */
 .stAlert, div[data-testid="stExpander"] {
-    background-color: #ffffff !important;
-    border: 2px solid #0f172a !important;
-    border-radius: 10px !important;
-    color: #0f172a !important;
+    background-color: #f8fafc !important; /* Fondo claro para dar contraste sobre el azul */
+    border: 2px solid #0f172a !important; /* Bordes oscuros definidos y modernos */
+    border-radius: 12px !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
+/* Textos dentro de cuadros claros van estrictamente en NEGRO o AZUL OSCURO */
 .stAlert *, div[data-testid="stExpander"] * {
     color: #0f172a !important;
 }
@@ -57,7 +70,7 @@ div[data-baseweb="select"],
 div[data-testid="stTextInput"] input,
 div[data-testid="stNumberInput"] input {
     background-color: #ffffff !important;
-    color: #0f172a !important;
+    color: #0f172a !important; /* Letras negras para escribir con claridad */
     border-radius: 8px !important;
     border: 2px solid #0f172a !important;
     font-weight: 700 !important;
@@ -67,12 +80,13 @@ div[data-testid="stNumberInput"] input {
    5. BOTONES Y LLAMADOS A LA ACCIÓN (Cuadros Amarillos con Letras Negras)
    ========================================================= */
 button[kind="primary"], div.stButton > button {
-    background-color: #ffcc00 !important; /* Cuadro / Botón amarillo vibrante */
-    color: #000000 !important;            /* Letras negras estrictas */
+    background-color: #ffcc00 !important; /* Cuadro amarillo vibrante estilo llamada a la acción */
+    color: #000000 !important;            /* Letras negras contrastantes */
     font-weight: 900 !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
     border: 2px solid #0f172a !important;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.2s ease-in-out;
 }
 
 button[kind="primary"]:hover, div.stButton > button:hover {
@@ -81,17 +95,18 @@ button[kind="primary"]:hover, div.stButton > button:hover {
 }
 
 /* =========================================================
-   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Fondo Blanco Limpio con Acentos)
+   6. CONTENEDOR DE RESULTADOS Y MÉTRICAS (Estructura Limpia y Diferenciada)
    ========================================================= */
 div.window-risk {
-    background-color: #ffffff !important;
-    border: 2px solid #0f172a !important;
+    background-color: #ffffff !important; /* Fondo blanco puro para la zona de resultados y gráficos */
+    border: 3px solid #0f172a !important;
     border-radius: 16px !important;
     padding: 24px !important;
-    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.35) !important;
     margin-top: 20px !important;
 }
 
+/* Textos dentro del panel de resultados en tono oscuro para legibilidad total */
 div.window-risk,
 div.window-risk *,
 div.window-risk p,
@@ -104,7 +119,7 @@ div.window-risk h4 {
     color: #0f172a !important;
 }
 
-/* Métricas destacadas en bloques amarillos con letras negras */
+/* Métricas destacadas en cuadros amarillos con bordes oscuros y letras negras */
 div.window-risk div[data-testid="stMetric"] {
     background-color: #ffcc00 !important;
     border: 2px solid #0f172a !important;

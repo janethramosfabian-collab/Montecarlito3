@@ -10,43 +10,24 @@ from core.sensitivity import calcular_sensibilidad, generar_grafico_tornado
 
 def render_simulator():
     """
-    Renderiza la interfaz completa del Simulador de Montecarlo.
+    Renderiza la interfaz completa del Simulador de Montecarlo adaptada al diseño financiero institucional.
     """
-    # Título principal de la aplicación
+    # Título principal de la aplicación (Título en blanco puro por CSS)
     st.title(':material/analytics: Simulador de Montecarlo')
     
     # Contenedor para los parámetros de la simulación
     with st.container(border=True, key="panel-parametros"):
-        st.subheader(':blue[:material/function: Parámetros de la simulación]')
+        st.subheader(':material/function: Parámetros de la simulación')
         
         c1, c2 = st.columns([2, 8], vertical_alignment="center")
         
         with c1:
             parVariableResultado = st.text_input('Variable resultado', 'Resultado')
             
-with c2:
+        with c2:
             st.write('##### Fórmula de la simulación')
             
-            # Configuración de tema oscuro y bordes para el editor de código
-            custom_theme = {
-                "name": "dark_financial",
-                "cursorColor": "#FFFFFF",
-                "selectionColor": "#0066FF",
-                "showGutter": False,
-                "highlightActiveLine": False,
-                "fontSize": "14px"
-            }
-            custom_css = """
-                .ace_editor {
-                    background-color: #111A30 !important;
-                    color: #FFFFFF !important;
-                    border-radius: 12px !important;
-                }
-                .ace_scroller {
-                    background-color: #111A30 !important;
-                }
-            """
-            
+            # Editor de código limpio integrado con la tarjeta oscura del CSS global
             parformula = code_editor(
                 '', 
                 lang='python', 
@@ -222,19 +203,19 @@ with c2:
                                 df_fuera = dfResultado[(dfResultado[parVariableResultado] < parMontoProbabilidad[0]) | 
                                                       (dfResultado[parVariableResultado] > parMontoProbabilidad[1])]
                                 
-                                fig_hist.add_trace(go.Histogram(x=df_fuera[parVariableResultado], marker=dict(color='#A3E4D7'), showlegend=False))
-                                fig_hist.add_trace(go.Histogram(x=dfRango[parVariableResultado], marker=dict(color='#2ECC71'), showlegend=False))
-                                fig_hist.add_vline(x=parMontoProbabilidad[0], line_dash="dash", line_color="#E74C3C", line_width=2)
-                                fig_hist.add_vline(x=parMontoProbabilidad[1], line_dash="dash", line_color="#E74C3C", line_width=2)
+                                fig_hist.add_trace(go.Histogram(x=df_fuera[parVariableResultado], marker=dict(color='#38BDF8'), showlegend=False))
+                                fig_hist.add_trace(go.Histogram(x=dfRango[parVariableResultado], marker=dict(color='#0066FF'), showlegend=False))
+                                fig_hist.add_vline(x=parMontoProbabilidad[0], line_dash="dash", line_color="#EF4444", line_width=2)
+                                fig_hist.add_vline(x=parMontoProbabilidad[1], line_dash="dash", line_color="#EF4444", line_width=2)
                                 fig_hist.update_layout(
-                                    title=dict(text=f"<b>Simulation Results: {parVariableResultado}</b>", font=dict(color='#0f172a', size=16)),
+                                    title=dict(text=f"<b>Simulation Results: {parVariableResultado}</b>", font=dict(color='#FFFFFF', size=16)),
                                     barmode='overlay',
-                                    plot_bgcolor='#ffffff',
-                                    paper_bgcolor='#ffffff',
+                                    plot_bgcolor='#111A30',
+                                    paper_bgcolor='#111A30',
                                     margin=dict(l=10, r=10, t=40, b=10),
-                                    xaxis=dict(title=f"Valores de {parVariableResultado}", gridcolor='#e2e8f0', title_font=dict(color='#1e293b')),
-                                    yaxis=dict(title="Frecuencia", gridcolor='#e2e8f0', title_font=dict(color='#1e293b')),
-                                    font=dict(color='#1e293b')
+                                    xaxis=dict(title=f"Valores de {parVariableResultado}", gridcolor='rgba(255,255,255,0.1)', title_font=dict(color='#FFFFFF')),
+                                    yaxis=dict(title="Frecuencia", gridcolor='rgba(255,255,255,0.1)', title_font=dict(color='#FFFFFF')),
+                                    font=dict(color='#FFFFFF')
                                 )
                                 
                                 st.plotly_chart(fig_hist, use_container_width=True)
@@ -253,6 +234,11 @@ with c2:
                         df_corr = calcular_sensibilidad(dfResultado, parVariableResultado)
                         if not df_corr.empty:
                             fig_tornado = generar_grafico_tornado(df_corr)
+                            fig_tornado.update_layout(
+                                plot_bgcolor='#111A30',
+                                paper_bgcolor='#111A30',
+                                font=dict(color='#FFFFFF')
+                            )
                             st.plotly_chart(fig_tornado, use_container_width=True)
                             
                     with tabDatos:
